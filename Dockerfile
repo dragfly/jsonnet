@@ -15,4 +15,6 @@ RUN apk add --no-cache libstdc++
 
 COPY --from=builder /opt/jsonnet/jsonnet /usr/local/bin
 
+WORKDIR /src
+
 ENTRYPOINT ["/usr/local/bin/jsonnet"]
